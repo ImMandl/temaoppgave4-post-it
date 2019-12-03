@@ -36,7 +36,7 @@ const Note = () => {
             text: 'take notes',
             id: noteId,
             color: noteColor
-        }
+        },
         ])
     }
 
@@ -53,27 +53,65 @@ const Note = () => {
         setNoteColor('lightblue')
     }
 
+    /* Filtrerer post-its etter farger */
+    const filterColors = () => {
+        setTodos(
+            array.filter(
+                todo => todo.color.includes(array.color)
+            )
+        )
+
+    }
+
     return (
         <div>
-            <h1>Take notes!</h1>
-            {/* knapper som endrer farger på sticky noten */}
-            <div className="categories">
-                <label className="container">Yellow
-                    <input type="radio" name="radio" onClick={yellowColor} />
-                    <span className="yellow checkmark"></span>
-                </label>
-                <label className="container">Pink
-                    <input type="radio" name="radio" onClick={pinkColor} />
-                    <span className="pink checkmark"></span>
-                </label>
-                <label className="container">Teal
-                    <input type="radio" name="radio" onClick={tealColor} />
-                    <span className="teal checkmark"></span>
-                </label>
+            <div className="wrapper">
+                <div>
+                    <h1>Take notes!</h1>
+                    {/* knapper som endrer farger på sticky noten */}
+                    <div className="categories">
+                        <label className="container">Yellow
+                            <input type="radio" name="radio" onClick={yellowColor} />
+                            <span className="yellow checkmark"></span>
+                        </label>
+                        <label className="container">Pink
+                            <input type="radio" name="radio" onClick={pinkColor} />
+                            <span className="pink checkmark"></span>
+                        </label>
+                        <label className="container">Teal
+                            <input type="radio" name="radio" onClick={tealColor} />
+                            <span className="teal checkmark"></span>
+                        </label>
+                    </div>
+
+                    {/* lag note */}
+                    <button className="create-btn" onClick={makeNote} >Make new post-it note</button>
+                </div>
+
+                {/* Filter */}
+                <div >
+                    <h1>Filter</h1>
+                    <div className="categories">
+                        <label className="container">Show all post-its
+                            <input type="radio" name="radio" onClick={''} />
+                            <span className="all checkmark"></span>
+                        </label>
+                        <label className="container">Show yellow post-its
+                            <input type="radio" name="radio" onClick={filterColors('#ffc')} />
+                            <span className="yellow checkmark"></span>
+                        </label>
+                        <label className="container">Show pink post-its
+                            <input type="radio" name="radio" onClick={pinkColor('pink')} />
+                            <span className="pink checkmark"></span>
+                        </label>
+                        <label className="container">Show teal post-its
+                            <input type="radio" name="radio" onClick={tealColor('lightblue')} />
+                            <span className="teal checkmark"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
 
-            {/* lag note */}
-            <button className="create-btn" onClick={makeNote} >Make new post-it note</button>
             {/* note i submodule */}
             <section className="card-container">
                 {
