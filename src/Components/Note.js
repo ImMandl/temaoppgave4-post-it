@@ -6,7 +6,7 @@ import NoteSubmodule from './NoteSubmodule'
 const Note = () => {
 
     // array med notes i
-    const array = [
+    let array = [
         {
             text: 'edit this text',
             id: 1,
@@ -56,18 +56,17 @@ const Note = () => {
     return (
         <div>
             <h1>Take notes!</h1>
-
             {/* knapper som endrer farger på sticky noten */}
             <div className="categories">
-                <label class="container">Yellow
+                <label className="container">Yellow
                     <input type="radio" name="radio" onClick={yellowColor} />
                     <span className="yellow checkmark"></span>
                 </label>
-                <label class="container">Pink
+                <label className="container">Pink
                     <input type="radio" name="radio" onClick={pinkColor} />
                     <span className="pink checkmark"></span>
                 </label>
-                <label class="container">Teal
+                <label className="container">Teal
                     <input type="radio" name="radio" onClick={tealColor} />
                     <span className="teal checkmark"></span>
                 </label>

@@ -21,7 +21,7 @@ const NoteSumbodule = (props) => {
             handle=".handle"
         >
             { /* sticky note kortet */}
-            <div className="card scroll" style={{ backgroundColor: props.color }} >
+            <div className="card scroll " style={{ backgroundColor: props.color }} >
                 <div className="notepad-item">
 
                     <div className='icon-btn-container'>

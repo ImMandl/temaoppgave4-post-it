@@ -1,11 +1,13 @@
 {
-  "name": "tema4_temaoppgave_bjornstad",
+  "name": "temaoppgave-post-it",
+  "homepage": "https://ImMandl.github.io/temaoppgave-post-it/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "emotion": "^10.0.23",
+    "gh-pages": "^2.1.1",
     "local-storage": "^2.0.0",
     "react": "^16.12.0",
     "react-color": "^2.17.3",
@@ -20,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
