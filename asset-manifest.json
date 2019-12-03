@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/temaoppgave-post-it/static/css/main.900150fb.chunk.css",
-    "main.js": "/temaoppgave-post-it/static/js/main.230fd26a.chunk.js",
-    "main.js.map": "/temaoppgave-post-it/static/js/main.230fd26a.chunk.js.map",
+    "main.js": "/temaoppgave-post-it/static/js/main.615b1d18.chunk.js",
+    "main.js.map": "/temaoppgave-post-it/static/js/main.615b1d18.chunk.js.map",
     "runtime-main.js": "/temaoppgave-post-it/static/js/runtime-main.bba95346.js",
     "runtime-main.js.map": "/temaoppgave-post-it/static/js/runtime-main.bba95346.js.map",
     "static/js/2.2fb7ba0b.chunk.js": "/temaoppgave-post-it/static/js/2.2fb7ba0b.chunk.js",
     "static/js/2.2fb7ba0b.chunk.js.map": "/temaoppgave-post-it/static/js/2.2fb7ba0b.chunk.js.map",
     "index.html": "/temaoppgave-post-it/index.html",
-    "precache-manifest.754454eaedb3dd1c9a60383d59bb3a65.js": "/temaoppgave-post-it/precache-manifest.754454eaedb3dd1c9a60383d59bb3a65.js",
+    "precache-manifest.3124a90c3ea3b14452b522b194fc8792.js": "/temaoppgave-post-it/precache-manifest.3124a90c3ea3b14452b522b194fc8792.js",
     "service-worker.js": "/temaoppgave-post-it/service-worker.js",
     "static/css/main.900150fb.chunk.css.map": "/temaoppgave-post-it/static/css/main.900150fb.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.bba95346.js",
     "static/js/2.2fb7ba0b.chunk.js",
     "static/css/main.900150fb.chunk.css",
-    "static/js/main.230fd26a.chunk.js"
+    "static/js/main.615b1d18.chunk.js"
   ]
 }
