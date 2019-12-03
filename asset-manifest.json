@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/temaoppgave-post-it/static/css/main.cc0a9c52.chunk.css",
-    "main.js": "/temaoppgave-post-it/static/js/main.0f30e566.chunk.js",
-    "main.js.map": "/temaoppgave-post-it/static/js/main.0f30e566.chunk.js.map",
-    "runtime-main.js": "/temaoppgave-post-it/static/js/runtime-main.bba95346.js",
-    "runtime-main.js.map": "/temaoppgave-post-it/static/js/runtime-main.bba95346.js.map",
-    "static/js/2.a7d82822.chunk.js": "/temaoppgave-post-it/static/js/2.a7d82822.chunk.js",
-    "static/js/2.a7d82822.chunk.js.map": "/temaoppgave-post-it/static/js/2.a7d82822.chunk.js.map",
-    "index.html": "/temaoppgave-post-it/index.html",
-    "precache-manifest.6206292ccf07b43f2c2b52041034b390.js": "/temaoppgave-post-it/precache-manifest.6206292ccf07b43f2c2b52041034b390.js",
-    "service-worker.js": "/temaoppgave-post-it/service-worker.js",
-    "static/css/main.cc0a9c52.chunk.css.map": "/temaoppgave-post-it/static/css/main.cc0a9c52.chunk.css.map"
+    "main.css": "/temaoppgave4-post-it/static/css/main.cc0a9c52.chunk.css",
+    "main.js": "/temaoppgave4-post-it/static/js/main.8f46c023.chunk.js",
+    "main.js.map": "/temaoppgave4-post-it/static/js/main.8f46c023.chunk.js.map",
+    "runtime-main.js": "/temaoppgave4-post-it/static/js/runtime-main.ed38404c.js",
+    "runtime-main.js.map": "/temaoppgave4-post-it/static/js/runtime-main.ed38404c.js.map",
+    "static/js/2.a9e122b2.chunk.js": "/temaoppgave4-post-it/static/js/2.a9e122b2.chunk.js",
+    "static/js/2.a9e122b2.chunk.js.map": "/temaoppgave4-post-it/static/js/2.a9e122b2.chunk.js.map",
+    "index.html": "/temaoppgave4-post-it/index.html",
+    "precache-manifest.3482605144cbdcd1eabcc23579840080.js": "/temaoppgave4-post-it/precache-manifest.3482605144cbdcd1eabcc23579840080.js",
+    "service-worker.js": "/temaoppgave4-post-it/service-worker.js",
+    "static/css/main.cc0a9c52.chunk.css.map": "/temaoppgave4-post-it/static/css/main.cc0a9c52.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.bba95346.js",
-    "static/js/2.a7d82822.chunk.js",
+    "static/js/runtime-main.ed38404c.js",
+    "static/js/2.a9e122b2.chunk.js",
     "static/css/main.cc0a9c52.chunk.css",
-    "static/js/main.0f30e566.chunk.js"
+    "static/js/main.8f46c023.chunk.js"
   ]
 }
