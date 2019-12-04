@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react'
 import { MdDelete } from "react-icons/md"
-import { MdDragHandle } from "react-icons/md"
 import './NoteModule.css'
 
 const NoteSumbodule = (props) => {

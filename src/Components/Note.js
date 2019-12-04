@@ -14,9 +14,10 @@ const Note = () => {
         }
     ]
 
-    const [todos, setTodos] = useState(array)
-    const [noteId, setNoteId] = useState('') // må ha med '' ellers vil ikke note bli slettet
-    const [noteColor, setNoteColor] = useState('#ffc') // fargekode i usestate så note starter med farge selv om man ikke velger en
+    const [todos, setTodos] = useState(array) // 
+    const [fargevalg, setFargevalg] = useState("all") // filterer post-its etter farge. Starter med å vise alle
+    const [noteId, setNoteId] = useState(2) // starter neste note med id 2
+
 
     const remove = (id) => {
         // fjerner note item
@@ -27,40 +28,24 @@ const Note = () => {
         )
     }
 
-    const makeNote = () => {
+    const makeNote = (evt) => {
         // skal gi hver note en unik id
         setNoteId(noteId + 1)
+        // lager en kopi av array
+        let kopi = [...todos]
         // lager en note 
-        setTodos([...todos,
+        setTodos([...kopi,
         {
             text: 'take notes',
             id: noteId,
-            color: noteColor
+            color: evt.target.value
         },
         ])
     }
 
-    // fargene man kan gi post-it lappene
-    const yellowColor = () => {
-        setNoteColor('#ffc')
-    }
-
-    const pinkColor = () => {
-        setNoteColor('pink')
-    }
-
-    const tealColor = () => {
-        setNoteColor('lightblue')
-    }
-
     /* Filtrerer post-its etter farger */
-    const filterColors = () => {
-        setTodos(
-            array.filter(
-                todo => todo.color.includes(array.color)
-            )
-        )
-
+    const filterColors = (evt) => {
+        setFargevalg(evt.target.value)
     }
 
     return (
@@ -68,44 +53,43 @@ const Note = () => {
             <div className="wrapper">
                 <div>
                     <h1>Take notes!</h1>
-                    {/* knapper som endrer farger på sticky noten */}
+                    <h2>Choose color for post-it note</h2>
+                    {/* knapper som lager notes */}
                     <div className="categories">
                         <label className="container">Yellow
-                            <input type="radio" name="radio" onClick={yellowColor} />
+                            <input type="button" name="button" value="#ffc" onClick={makeNote} />
                             <span className="yellow checkmark"></span>
                         </label>
                         <label className="container">Pink
-                            <input type="radio" name="radio" onClick={pinkColor} />
+                            <input type="button" name="button" value="pink" onClick={makeNote} />
                             <span className="pink checkmark"></span>
                         </label>
                         <label className="container">Teal
-                            <input type="radio" name="radio" onClick={tealColor} />
+                            <input type="button" name="button" value="lightblue" onClick={makeNote} />
                             <span className="teal checkmark"></span>
                         </label>
                     </div>
-
-                    {/* lag note */}
-                    <button className="create-btn" onClick={makeNote} >Make new post-it note</button>
                 </div>
 
                 {/* Filter */}
                 <div >
                     <h1>Filter</h1>
+                    <h2>Choose color to filter by</h2>
                     <div className="categories">
-                        <label className="container">Show all post-its
-                            <input type="radio" name="radio" onClick={''} />
+                        <label className="container" >Show all post-its
+                            <input type="radio" name="radio" value="all" onClick={filterColors} />
                             <span className="all checkmark"></span>
                         </label>
                         <label className="container">Show yellow post-its
-                            <input type="radio" name="radio" onClick={filterColors('#ffc')} />
+                            <input type="radio" name="radio" value="#ffc" onClick={filterColors} />
                             <span className="yellow checkmark"></span>
                         </label>
                         <label className="container">Show pink post-its
-                            <input type="radio" name="radio" onClick={pinkColor('pink')} />
+                            <input type="radio" name="radio" value="pink" onClick={filterColors} />
                             <span className="pink checkmark"></span>
                         </label>
                         <label className="container">Show teal post-its
-                            <input type="radio" name="radio" onClick={tealColor('lightblue')} />
+                            <input type="radio" name="radio" value="lightblue" onClick={filterColors} />
                             <span className="teal checkmark"></span>
                         </label>
                     </div>
@@ -114,17 +98,26 @@ const Note = () => {
 
             {/* note i submodule */}
             <section className="card-container">
-                {
-                    todos.map(
-                        (todo, key) =>
+                {fargevalg !== "all" &&
+                    todos.filter(todo => todo.color === fargevalg).
+                        map((todo, Key) =>
                             <NoteSubmodule
                                 color={todo.color}
                                 todo={todo.text}
                                 id={todo.id}
-                                key={key}
+                                key={Key}
                                 remove={remove}
-                            />
-                    )
+                            />)
+                }
+                {fargevalg === "all" &&
+                    todos.map((todo, Key) =>
+                        <NoteSubmodule
+                            color={todo.color}
+                            todo={todo.text}
+                            id={todo.id}
+                            key={Key}
+                            remove={remove}
+                        />)
                 }
             </section>
         </div >

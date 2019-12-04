@@ -24,7 +24,8 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 6px;
+  font-size: 2rem;
+  margin-bottom: 14px;
 }
 
 p, li {
@@ -43,12 +44,12 @@ input:active {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2rem;  
+  border-bottom: 1px solid;
 }
 
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
   gap: 2rem;
-  
 }
